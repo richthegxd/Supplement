@@ -1,0 +1,841 @@
+/* 16-77 -> ОБЩИЕ СТИЛИ
+82-115 -> МЕНЮ
+120-222 -> ПЕРВАЯ СЕКЦИЯ #header_section
+227-271 -> ВТОРАЯ СЕКЦИЯ #description_product
+275-331 -> ТРЕТЬЯ СЕКЦИЯ #offer
+335-425 -> ЧЕТВЕРТАЯ СЕКЦИЯ #real_man
+430-533 -> ПЯТАЯ СЕКЦИЯ/СЛАЙДЕР #client
+538-621 -> ШЕСТАЯ СЕКЦИЯ #supplemen
+626-662 -> СЕДЬМАЯ СЕКЦИЯ #certifications
+667-710 -> ВОСЬМАЯ СЕКЦИЯ #subscribe
+715-760 -> ВОСЬМАЯ СЕКЦИЯ #inquire
+765-809 -> ПОДВАЛ footer
+813-841 -> АНИМАЦИИ */
+/* -----------------------ОБЩИЕ СТИЛИ----------------------- */
+
+body {
+    background: #fafcfc;
+    font-family: "Lato-Light";
+    font-size: 16px;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+::-webkit-scrollbar-track { 
+    border-radius: 0px 6px 6px 0px;
+} 
+::-webkit-scrollbar-thumb { 
+    -webkit-border-radius: 6px; 
+    background: #18a3dd;
+} 
+::-webkit-scrollbar{ 
+    width: .5vh; 
+    height: 0px;
+}
+input,textarea {
+    outline: none;
+    resize: none;
+}
+input::placeholder,textarea::placeholder {
+    transition: all .5s;
+}
+input:focus::placeholder,textarea:focus::placeholder {
+    opacity: 0;
+}
+/* -----------------------ЗАГОЛОВКИ БЛОКОВ----------------------- */
+
+        .placeholder_block {
+            font-size: 30px;
+            color: #333740;
+            text-align: center;
+        }
+        .first_section_placeholder {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+        .bold_placeholder {
+            font-family: "Raleway-ExtraBold";
+            text-transform: uppercase;
+        }
+        .border_placeholder{
+            width: 1px;
+            background: #18a3dd;
+            margin: 0 20px;
+        }
+        .light_placeholder {
+            font-family: "Raleway-Light";
+            text-transform: uppercase;
+        }
+        .text_placeholder{
+            color: #83888f;
+            font-size: 16px;
+            line-height: 1;
+            margin-top: 15px;
+        }
+
+
+/* ----------------------- МЕНЮ ----------------------- */
+
+#menu {
+    height: 100vh;
+    width: 40vh;
+    z-index: 99;
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    padding: 0 0px;
+    right: 0;
+    top: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity .4s;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    cursor: pointer;
+}
+.menu_butt {
+    /* text-transform: uppercase; */
+    font-family: "Raleway-Light";
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    transition: all .5s;
+    cursor: pointer;
+    font-weight: 600;
+}
+.menu_butt:nth-child(even) {
+    background: rgba(102, 102, 102, .2);
+}
+.menu_butt:hover {
+    background: #18a3dd;
+    color: #1e1528;
+}
+
+
+/* ----------------------- ПЕРВАЯ СЕКЦИЯ #header_section ----------------------- */
+
+.header_section {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 15px 180px 15px;
+}
+.introduce_header,.header_section_content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#introduce_header, .introduce_header {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 25px;
+    transition: all .5s;
+}
+#active_header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    left: 0;
+    z-index: 98;
+    background: rgba(210, 210, 210, .9);
+    animation: activeHeader .6s ease-in-out forwards;
+}
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: #656973;
+    font-family: "HelveticaNeueLTStd-Hv";
+}
+#openMenuButt {
+    cursor: pointer;
+}
+.text_logo {
+    margin-left: 15px;
+    cursor: default;
+}
+.header_section_content {
+    margin-top: 180px;
+}
+.doitnow {
+    border-left: 5px solid #18a3dd;
+    padding-left: 30px;
+    line-height: 1;
+}
+.doitnow_main_text {
+    font-size: 72px;
+    font-family: "Raleway-Heavy";
+    color: #333740;
+    text-transform: uppercase;
+    line-height: .73;
+}
+.doitnow_pre_text {
+    font-family: "Raleway-ExtraBold";
+    color: #333740;
+    font-size: 24px;
+    line-height: .8;
+    margin-top: 30px;
+}
+.description {
+    font-family: "Lato-Light";
+    margin-top: 75px;
+    color: #666666;
+}
+.header_button {
+    max-width: 390px;
+    width: 100%;
+    margin-top: 50px;
+    font-family: "Lato-Bold";
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.order {
+    padding: 10px 40px;
+    border-radius: 5vh;
+    color: #f1f1f1;
+    background: #18a3dd;
+    text-transform: uppercase;
+    transition: background .5s;
+    cursor: pointer;
+}
+.order:hover {
+    background: #333740;
+}
+.video {
+    text-transform: uppercase;
+    color: #333740;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.watch_icon {
+    margin: 0 10px;
+    height: 100%;
+}
+
+
+/* ----------------------- ВТОРАЯ СЕКЦИЯ #description_product ----------------------- */
+
+.description_product_block {
+    background: #1e1528;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.single_elem {
+    position: relative;
+    margin-right: 140px;
+}
+.single_product {
+    position: absolute;
+    transform: translate(-70%, -55%);
+}
+.class_product {
+    margin: 0 60px;
+    min-width: 155px;
+}
+.value_with_border {
+    display: flex;
+    flex-wrap: row nowrap;
+    align-items: center;
+}
+.fake_border {
+    height: 55px;
+    width: 5px;
+    background: #18a3dd;
+}
+.value {
+    font-family: "Lato-Black";
+    color: white;
+    font-size: 72px;
+    margin-left: 25px;
+}
+.value_desc {
+    font-family: "Lato-Bold";
+    color: #18a3dd;
+    text-transform: uppercase;
+}
+.value_af_desc {
+    color: #a9a9a9;
+}
+
+
+/* ----------------------- ТРЕТЬЯ СЕКЦИЯ #offer ----------------------- */
+.offer {
+    margin-top: 80px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.offer_content {
+    margin-top: 75px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.left_column .block_content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+.left_column .border_content {
+    margin-left: 30px;
+}
+.left_column .text_content {
+    text-align: right;
+}
+.right_column .block_content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+.right_column .border_content {
+    margin-right: 30px;
+}
+.right_column .text_content {
+    text-align: left;
+}
+.block_content {
+    max-width: 260px;
+    margin: 80px 95px;
+}
+.placeholder_content {
+    font-family: "Lato-Bold";
+    font-size: 20px;
+    color: #333740;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row nowrap;
+    line-height: 1;
+}
+.border_content {
+    background: #18a3dd;
+    width: 5px;
+    height: 35px;
+    border-radius: 2vh;
+}
+.text_content {
+    color: #5b5f64;
+}
+
+
+/* ----------------------- ЧЕТВЕРТАЯ СЕКЦИЯ #real_man ----------------------- */
+.real_man {
+    padding-top: 120px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #ffff;
+    padding-bottom: 60px;
+}
+.real_man_content {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.example_real_man {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.scroll_butt,.scroll_butt_mob {
+    height: 100%;
+    transition: transform .6s;
+    cursor: pointer;
+}
+.revealator-slideright.scroll_butt:hover,.scroll_butt_mob:active {
+    transform: scale(1.2);
+}
+.mobile_butt {
+    display: none;
+    margin-top: 40px;
+}
+.mobile_butt .scroll_butt_mob {
+    margin: 0 50px;
+}
+.text_example {
+    margin-left: 15px;
+}
+.weight_content {
+    margin: 0 15px;
+}
+.weight {
+    display: flex;
+    flex-flow: row wrap;
+}
+.value_div  {
+    color: #333740;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+}
+.value_inner{
+    font-family: "Lato-Bold";
+    font-size: 40px;
+    line-height: 1;
+}
+.upper_inner{
+    text-transform: uppercase;
+    font-family: "Lato-Light";
+    margin-left: 10px;
+}
+.desc{
+    font-family: "Lato-Light";
+    color: #18a3dd;
+}
+.initials {
+    display: flex;
+    flex-flow: row nowrap;
+    color: #333740;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.initials_content {
+    margin-left: 25px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    line-height: 1;
+}
+.initials .border_content {
+    margin-left: 15px;
+    height: 40px;
+}
+.init_name{
+    font-family: "Raleway-Bold";
+    margin-bottom: 10px;
+}
+
+
+/* ----------------------- ПЯТАЯ СЕКЦИЯ/СЛАЙДЕР #client ----------------------- */
+
+.client {
+    background: url(../img/bg.png) center no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.client .first_section_placeholder{
+    color: #e5e5e5;
+    justify-content: center;
+}
+.text_client {
+    font-family: "Lato-LightItalic";
+    color: #a9a9a9;
+    max-width: 750px;
+    font-size: 16px;
+    text-align: center;
+}
+.slider_client {
+    position: relative;
+    max-height: 330px;
+    min-height: 330px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.slider_content {
+    transition: all .5s;
+    margin-top: 75px;
+}
+
+.slider_content_hidden {
+    /* display: none; */
+    opacity: 0;
+    animation: hiddenSlider 600ms ease-in-out;
+    position: absolute;
+    top:0 ;
+}
+.active_slider_content {
+    display: block;
+    animation: activeSlider 600ms 600ms forwards ease-in-out;
+    opacity: 0;
+}
+.slider {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    z-index: 9;
+    position: absolute;
+    bottom: 90px;
+}
+.slider_button {
+    background: #342e3a;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    margin: 0 7px;
+    transition: background .6s;
+    cursor: pointer;
+}
+.slider_button:hover {
+    background: #18a3dd;
+}
+.sb_active {
+    background: #18a3dd;
+}
+.client_initials {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+.inner_client_initials {
+    margin-left: 30px;
+    min-width: 135px;
+}
+.client_photo {
+    height: 73px;
+    width: 65px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.client_name {
+    text-transform: uppercase;
+    font-family: "Raleway-Bold";
+    color: #e5e5e5;
+    font-size: 16px;
+}
+.client_location {
+    font-size: 14px;
+    color: #a9a9a9 ;
+    text-align: left;
+}
+.border_client {
+    background: #18a3dd;
+    height: 5px;
+    width: 35px;
+    border-radius: 2vh;
+    margin-top: 10px;
+}
+
+
+/* ----------------------- ШЕСТАЯ СЕКЦИЯ #supplement ----------------------- */
+
+.supplement {
+    padding: 120px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #333740;
+}
+.supplement_content {
+    margin-top: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 945px;
+    width: 100%;
+}
+.ingredients {
+    max-width: 457px;
+    width: 100%;
+    position: relative;
+}
+.ingredients div,.ingredients button {
+    width: 100%;  
+}
+.introduce_ing {
+    border-bottom: .5vh solid #333740;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.introduce_ing h6  {
+    font-family: "Lato-Black";
+}
+.placeholder_ing {
+    font-size: 24px;
+}
+.right_ing {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+.ing_text {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 17px;
+    transition: all .4s;
+    border-bottom: .1vh solid #ebebeb;
+    margin: 5px 0;
+}
+.first_text {
+    margin-top: 30px;
+}
+.download {
+    padding: 10px 40px;
+    border-radius: 5vh;
+    font-family: "Lato-Bold";
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: #f1f1f1;
+    background: #18a3dd;
+    text-transform: uppercase;
+    transition: background .5s;
+    cursor: pointer;
+}
+.weight_download {
+    font-family: "Lato-Light";
+}
+.extra .client_photo {
+    width: 105px;
+    height: 115px;
+}
+.extra .border_content{
+    margin-left: 0;
+}
+.recipe {
+    max-width: 360px;
+    margin-top: 35px;
+    color: #666666;
+}
+
+
+/* ----------------------- СЕДЬМАЯ СЕКЦИЯ #certifications ----------------------- */
+
+.certifications {
+    padding: 80px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #f1f4f5;
+}
+.certifications_content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 960px;
+    margin-top: 60px;
+    width: 100%;
+}
+.svg_margin {
+    margin-right: 60px;
+}
+.section_product {
+    padding: 120px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.bp {
+    margin-right: 40px;
+}
+.section_product .init_name{
+    font-size: 30px;
+}
+.section_product .init_age {
+    font-size: 20px;
+}
+.section_product .order {
+    margin-top: 40px;
+}
+
+
+/* ----------------------- ВОСЬМАЯ СЕКЦИЯ #subscribe ----------------------- */
+
+.subscribe {
+    padding: 100px 0 120px 0;
+    background: url(../img/bg1.png) center no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.subscribe .bold_placeholder,.subscribe .light_placeholder{
+    color: #e5e5e5;
+}
+.subscribe .text_placeholder {
+    color: #767a7d;
+}
+.subscribe_form {
+    background: rgba(0, 0, 0, .5);
+    padding: 35px 30px;
+    border-radius: .8vh;
+    max-width: 615px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    margin-top: 35px;
+}
+.mail_input {
+    border-radius: 5vh 0 0 5vh;
+    padding: 10px 30px;
+    width: 100%;
+}
+.mail_submit {
+    border-radius: 0 5vh 5vh 0;
+    padding: 10px 30px;
+    font-family: "Lato-Bold";
+    text-transform: uppercase;
+    width: 150px;
+    background: #666666;
+    color: #ffff;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+
+/* ----------------------- ВОСЬМАЯ СЕКЦИЯ #inquire ----------------------- */
+
+.inquire {
+    padding: 120px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #ffff;
+}
+.inquire_form {
+    margin-top: 80px;
+    max-width: 585px;
+    width: 100%;
+    font-size: 16px;
+}
+.fieldset_initials {
+    display: flex;
+    flex-flow: row wrap;
+}
+.inquire_input {
+    font-size: 16px;
+    border-bottom: .1vh solid #dbdbdb;
+    line-height: 1;
+    padding: 15px 0;
+    transition: all .5s;
+}
+fieldset {
+    margin-top: 50px;
+}
+.initials_input {
+    width: 262px;
+    margin: 0 15px;
+}
+.subject_input {
+    width: 100%;
+    margin: 0 15px;
+    height: 100%;
+    line-height: 1;
+    padding: 0;
+}
+#status_send {
+    margin-top: 100px;
+    height: 24px;
+}
+.inquire_submit {
+    margin-top: 90px;
+    width: 225px;
+}
+
+
+/* ----------------------- ПОДВАЛ footer----------------------- */
+
+footer {
+    background: #f1f4f5;
+    padding: 50px 0;
+}
+.footer_content {
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #666666;
+}
+.nav_butt {
+    margin: 0 15px 0 0;
+    font-size: 14px;
+    transition: all .5s;
+    cursor: pointer;
+}
+.nav_butt:hover {
+    color: #18a3dd;
+}
+nav {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.social {
+    display: flex;
+    flex-flow: row wrap;
+}
+.social svg{
+    width: 24px;
+    height: 24px;
+    margin: 0 25px;
+}
+#fill_path {
+    transition: fill ease-in-out .4s;
+    fill: #666666
+}
+svg:hover #fill_path{
+    fill: #18a3dd;
+}
+
+
+/* ----------------------- АНИМАЦИИ ----------------------- */
+@keyframes activeSlider {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes hiddenSlider {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes activeHeader {
+    from {
+        transform: translateY(-4vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
